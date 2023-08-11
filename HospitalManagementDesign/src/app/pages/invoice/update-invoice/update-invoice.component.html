@@ -1,0 +1,36 @@
+<app-accountant></app-accountant>
+
+<div class="col-md-5 offset-md-3">
+    <h3>Update Invoice</h3>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label>Invoice Number</label>
+            <input type="text" class="form-control" id="invoiceNumber"
+            [(ngModel)]="invoice.invoiceNumber" name="invoiceNumber">
+        </div>
+        <div class="form-group">
+            <label>Amount</label>
+            <input type="number" class="form-control" id="amount"
+            [(ngModel)]="invoice.amount" name="amount">
+        </div>
+
+        <div class="form-group">
+            <label>Date</label>
+            <input type="date" class="form-control" id="date"
+            [(ngModel)]="invoice.date" name="date">
+        </div>
+
+        <div class="form-group">
+            <label>Date</label>
+            <input type="text" class="form-control" id="description"
+            [(ngModel)]="invoice.description" name="description">
+        </div>
+
+       
+
+
+
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+</div>

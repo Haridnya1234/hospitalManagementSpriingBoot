@@ -1,0 +1,28 @@
+<!-- <app-pharmacist></app-pharmacist> -->
+<h1>Medicine List</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Medicine Name</th>
+            <th>Batch Number</th>
+            <th>Manufacture Date</th>
+            <th>Expiry Date</th>
+            <th>Stock</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let medicine of medicines">
+
+            <td>{{ medicine.medicineName }}</td>
+            <td>{{ medicine.batchNumber }}</td>
+            <td>{{ medicine.manufactureDate }}</td>
+            <td>{{ medicine.expiryDate }}</td>
+            <td>{{ medicine.stock }}</td>
+            <td>
+                <button (click)="updateMedicine(medicine.id)" class="btn btn-info">Update</button>
+                <button (click)="deleteMedicine(medicine.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

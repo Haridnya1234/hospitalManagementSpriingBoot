@@ -1,0 +1,33 @@
+<app-accountant></app-accountant>
+<div class="col-md-5 offset-md-3">
+    <h3>Add Medicine</h3>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label>Bill Number</label>
+            <input type="text" class="form-control" id="billNumber"
+            [(ngModel)]="bill.billNumber" name="billNumber">
+        </div>
+
+        <div class="form-group">
+            <label>Amount</label>
+            <input type="number" class="form-control" id="amount"
+            [(ngModel)]="bill.amount" name="amount">
+        </div>
+
+        <div class="form-group">
+            <label>Date</label>
+            <input type="date" class="form-control" id="date"
+            [(ngModel)]="bill.date" name="date">
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            <input type="text" class="form-control" id="description"
+            [(ngModel)]="bill.description" name="description">
+        </div>
+
+
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+</div>

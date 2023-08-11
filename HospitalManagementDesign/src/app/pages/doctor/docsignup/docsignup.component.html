@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="copyright" content="MACode ID, https://macodeid.com/">
+
+  <title>LifeLine Hospital</title>
+
+  <link rel="stylesheet" href="/assets/css/maicons.css">
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
+
+   <!-- <link rel="stylesheet" href="assets/vendor/owl-carousel/css/owl.carousel.css">
+
+  <link rel="stylesheet" href="/assets/vendor/animate/animate.css"> -->
+
+  <link rel="stylesheet" href="/assets/css/theme.css">
+</head>
+<body>
+
+  <div class="back-to-top"></div>
+
+  <header>
+    <div class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 text-sm">
+            <div class="site-info">
+              <a href="#"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
+              <span class="divider">|</span>
+              <a href="#"><span class="mai-mail text-primary"></span> lifelinehospitaldemo@gmail.com
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-4 text-right text-sm">
+            <div class="social-mini-button">
+              <a href="https://www.facebook.com/"><span class="mai-logo-facebook-f"></span></a>
+              <a href="https://twitter.com/i/flow/login"><span class="mai-logo-twitter"></span></a>
+              <a href="https://www.linkedin.com/login" target="_blank"><span class="mai-logo-linkedin"></span></a>
+              <a href="https://www.instagram.com/accounts/login/"><span class="mai-logo-instagram"></span></a>
+            </div>
+          </div>
+        </div> 
+      </div> 
+    </div> 
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#"><span class="text-primary">Life</span>-Line</a>
+
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupport">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/doctorfrontend">Doctors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/news">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary ml-lg-3" href="/loginas">Login</a>
+              <a class="btn btn-primary ml-lg-3" href="/signupas">Register</a>
+
+            </li>
+          </ul>
+        </div> 
+      </div> 
+    </nav>
+  </header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>Doctor SignUp</h1>
+          <h4> Register Here</h4>
+        </div>
+        <form (ngSubmit)="formSubmit()">
+
+          <div class="mb-3">
+            <label for="firstname" class="form-label">First Name</label>
+            <input [(ngModel)]="doctor.doctorFirstName"name="firstname" type="text" class="form-control" id="firstname">
+          </div>
+          <div class="mb-3">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input [(ngModel)]="doctor.doctorLastName"name="lasttname" type="text" class="form-control" id="lastname">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input [(ngModel)]="doctor.email"name="email" type="text" class="form-control" id="email">
+            <div  class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input [(ngModel)]="doctor.address"name="address" type="text" class="form-control" id="address">
+          </div>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input [(ngModel)]="doctor.username"name="username" type="text" class="form-control" id="username">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input [(ngModel)]="doctor.password"name="password" type="text" class="form-control" id="password">
+          </div>
+          <div class="mb-3">
+            <label for="contact" class="form-label">Contact</label>
+            <input [(ngModel)]="doctor.contact"name="contact" type="number" class="form-control" id="contact">
+          </div>
+          <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input [(ngModel)]="doctor.age"name="contact" type="number" class="form-control" id="age">
+          </div>
+          <div class="mb-3">
+            <label for="gender" class="form-label">Gender</label>
+            <input [(ngModel)]="doctor.gender"name="contact" type="text" class="form-control" id="gender">
+          </div>
+          <div class="mb-3">
+            <label for="degree" class="form-label">Degree</label>
+            <input [(ngModel)]="doctor.degree"name="text" type="text" class="form-control" id="degree">
+          </div>
+        
+          <div class="mb-3">
+            <label for="experience" class="form-label">Experience</label>
+            <input [(ngModel)]="doctor.experience"name="text" type="text" class="form-control" id="experience">
+          </div>
+          <div class="mb-3">
+          <label for="membership"><h4>Specialization:</h4></label>
+          <br>
+          <select  [(ngModel)]="doctor.specialization" name="specialization" id="specialization" style="width: 400px;height: 50px;" >
+            <option value="cardiologists">Cardiologists</option>
+            <option value="dermatologists">Dermatologists</option>
+            <option value="endocrinologists">Endocrinologists</option>
+            <option value="emergency Medicine Specialists">Emergency Medicine Specialists</option>
+            <option value="family Physicians">Family Physicians</option>
+            <option value="infectious Disease Specialists">Infectious Disease Specialists</option>
+            <option value="neurologists">Neurologists</option>
+            <option value="gynecologists">Gynecologists</option>
+            <option value="pathologists">Pathologists</option>
+            <option value="pediatricians">Pediatricians</option>
+            <option value="physiatrists">Physiatrists</option>
+            <option value="other">Other</option>
+          </select>           
+          <!-- <input [(ngModel)]="doctor.specialization"name="text" type="text" class="form-control" id="specialization"> -->
+        </div>
+          <br>
+          <br>
+          <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<mat-card>
+    <mat-card-content>
+        <div class="boostrap-wrapper">
+            <div class="container">
+                <div class="row">
+                    <!-- <div class="col-md-10 offset-md-1"> -->
+                        <h1 class="text-center">Test Details</h1>
+                        <table class="table text-center">
+                            <thead class="thead">
+                                <tr>
+                                    <td>Test Id</td>
+                                    <td>Test Name</td>
+                                    <td>Test Sample</td>
+                                    <td>Test Duration</td>
+                                    <td>Price In RS</td>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+                                <tr *ngFor="let labTestData of labTest">
+
+                                    <td>{{labTestData.id}}</td>
+                                    <td>{{labTestData.testname}}</td>
+                                    <td>{{labTestData.testsample}}</td>
+                                    <td>{{labTestData.testduration}}</td>
+                                    <td>{{labTestData.priceInRS}}</td>
+                                    <mat-card-actions class="text-center">
+                                        <button  routerLink="/viewlabtest" mat-raised-button color="bg-warning">Show</button>
+                                         <button  routerLink="/updatelabtest" mat-raised-button color="primary">Update</button>
+                                        <!-- <button (click)="updatePatient(patient.id)" class="btn btn-primary">Update</button> -->
+                                        <button (click)="deleteLabTest(labTestData.id)" mat-raised-button style="left: 20px;" color="accent">Delete</button>
+                                    </mat-card-actions>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    <!-- </div> -->
+                </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+
+
+	
+

@@ -1,0 +1,56 @@
+<mat-card>
+    <mat-card-content>
+        <div class="boostrap-wrapper">
+            <div class="container">
+                <div class="row">
+                    <!-- <div class="col-md-10 offset-md-1"> -->
+                        <h1 class="text-center">All Appointments</h1>
+                        <table class="table text-center">
+                            <thead class="thead">
+                                <tr>
+                                    <td>Appointment Id</td>
+                                    <td>Full Name</td>
+                                    <td>Email</td>
+                                    <td>Contact</td>
+                                    <td>Age</td>
+                                    <td>Gender</td>
+                                    <td>Time</td>
+                                    <td>Date</td>                                  
+                                    <td>Health Problem</td>
+                                    <td>Status</td>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+                                <tr *ngFor="let appointmentData of appointment">
+
+                                    <td>{{appointmentData.id}}</td>
+                                    <td>{{appointmentData.fullname}}</td>
+                                    <td>{{appointmentData.contactno}}</td>
+                                    <td>{{appointmentData.email}}</td>
+                                    <td>{{appointmentData.age}}</td>
+                                    <td>{{appointmentData.healthProblem}}</td> 
+                                    <td>{{appointmentData.gender}}</td>
+                                    <td>{{appointmentData.appointmentDate}}</td>
+                                    <td>{{appointmentData.appointmentTime}}</td>
+                                    <td>{{appointmentData.status}}</td>
+                                    <mat-card-actions class="text-center">
+                                         <button  routerLink="/updateappointment" mat-raised-button color="primary">Update</button>
+                                        <!-- <button (click)="updatePatient(patient.id)" class="btn btn-primary">Update</button> -->
+                                        <button (click)="deleteAppointment(appointmentData.id)" mat-raised-button style="left: 20px;" color="accent">Delete</button>
+                                    </mat-card-actions>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </mat-card-content>
+        </mat-card>
+
+
+
+	
+
+

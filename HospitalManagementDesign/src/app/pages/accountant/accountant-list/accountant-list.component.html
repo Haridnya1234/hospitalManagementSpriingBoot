@@ -1,0 +1,26 @@
+<app-accountant></app-accountant>
+<h1>Accountant List</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Accountant Name</th>
+            <th>Email</th>
+            <th>UserName</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let accountant of accountants">
+            <td>{{accountant.accountantName}}</td>
+            <td>{{accountant.email}}</td>
+            <td>{{accountant.username}}</td>
+            <td>{{accountant.password}}</td>
+
+            <td>
+                <button (click)="updateAccountant(accountant.id)" class="btn btn-info">Update</button>
+                <button (click)="deleteAccountant(accountant.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            </td>
+        </tr>
+        
+    </tbody>
+</table>

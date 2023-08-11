@@ -1,0 +1,60 @@
+<mat-card>
+    <mat-card-content>
+        <div class="boostrap-wrapper">
+            <div class="container">
+                <div class="row">
+                    <!-- <div class="col-md-10 offset-md-1"> -->
+                        <h1 class="text-center">Doctor Details</h1>
+                        <table class="table text-center">
+                            <thead class="thead">
+                                <tr>
+                                    <td>Doctor Id</td>
+                                    <td>First Name</td>
+                                    <td>Last Name</td>
+                                    <td>Email</td>
+                                    <td>Username</td>
+                                    <td>Password</td>
+                                    <td>Address</td>
+                                    <td>Contact</td>
+                                    <td>Age</td>
+                                    <td>Gender</td>
+                                    <td>Degree</td>
+                                    <td>Specialization</td>
+                                    <td>Experience</td>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+                                <tr *ngFor="let doctorData of doctor">
+
+                                    <td>{{doctorData.doctorId}}</td>
+                                    <td>{{doctorData.doctorFirstName}}</td>
+                                    <td>{{doctorData.doctorLastName}}</td>
+                                    <td>{{doctorData.email}}</td>
+                                    <td>{{doctorData.username}}</td>
+                                    <td>{{doctorData.password}}</td>
+                                    <td>{{doctorData.address}}</td>
+                                    <td>{{doctorData.contact}}</td>
+                                    <td>{{doctorData.age}}</td>
+                                    <td>{{doctorData.gender}}</td>
+                                    <td>{{doctorData.degree}}</td>
+                                    <td>{{doctorData.specialization}}</td>
+                                    <td>{{doctorData.experience}}</td>
+                                    <mat-card-actions class="text-center">
+                                         <button  routerLink="/updatedoc" mat-raised-button color="primary">Update</button>
+                                        <!-- <button (click)="updatePatient(patient.id)" class="btn btn-primary">Update</button> -->
+                                        <button (click)="deleteDoctor(doctorData.doctorId)" mat-raised-button style="left: 20px;" color="accent">Delete</button>
+                                    </mat-card-actions>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </mat-card-content>
+        </mat-card>
+
+
+
+	
+

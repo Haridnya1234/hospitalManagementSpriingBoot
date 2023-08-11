@@ -1,0 +1,25 @@
+<app-pharmacist></app-pharmacist>
+<h1>Pharmacist List</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>User Name</th>
+            <th>Password</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pharmacist of pharmacists">
+
+            <td>{{ pharmacist.name }}</td>
+            <td>{{ pharmacist.userName }}</td>
+            <td>{{ pharmacist.password }}</td>
+            
+            <td>
+                <button (click)="updatePharmacist(pharmacist.id)" class="btn btn-info">Update</button>
+                <button (click)="deletePharmasics(pharmacist.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

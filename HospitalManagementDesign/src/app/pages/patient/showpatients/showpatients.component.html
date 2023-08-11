@@ -1,0 +1,57 @@
+
+
+<mat-card>
+    <mat-card-content>
+        <div class="boostrap-wrapper">
+            <div class="container">
+                <div class="row">
+                    <!-- <div class="col-md-10 offset-md-1"> -->
+                        <h1 class="text-center">Patient Details</h1>
+                        <table class="table text-center">
+                            <thead class="thead">
+                                <tr>
+                                    <td>Patient Id</td>
+                                    <td>First Name</td>
+                                    <td>Last Name</td>
+                                    <td>Email</td>
+                                    <td>Username</td>
+                                    <td>Password</td>
+                                    <td>Address</td>
+                                    <td>Contact</td>
+                                    <td>Age</td>
+                                    <td>Gender</td>
+                                    <td>BloodGroup</td>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+                                <tr *ngFor="let patientData of patient">
+
+                                    <td>{{patientData.id}}</td>
+                                    <td>{{patientData.firstname}}</td>
+                                    <td>{{patientData.lastname}}</td>
+                                    <td>{{patientData.email}}</td>
+                                    <td>{{patientData.username}}</td>
+                                    <td>{{patientData.password}}</td>
+                                    <td>{{patientData.address}}</td>
+                                    <td>{{patientData.contact}}</td>
+                                    <td>{{patientData.age}}</td>
+                                    <td>{{patientData.gender}}</td>
+                                    <td>{{patientData.bloodgroup}}</td>
+                                    <mat-card-actions class="text-center">
+                                         <button  routerLink="/updatepatient" mat-raised-button color="primary">Update</button>
+                                        <!-- <button (click)="updatePatient(patient.id)" class="btn btn-primary">Update</button> -->
+                                        <button (click)="deletePatient(patientData.id)" mat-raised-button style="left: 20px;" color="accent">Delete</button>
+                                    </mat-card-actions>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    <!-- </div> -->
+                </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+
+
+	

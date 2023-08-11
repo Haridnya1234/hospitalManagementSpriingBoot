@@ -1,0 +1,32 @@
+<app-accountant></app-accountant>
+
+<div class="col-md-5 offset-md-3">
+    <h3>Update Accountant</h3>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label>Accountant Name</label>
+            <input type="text" class="form-control" id="accountantName"
+            [(ngModel)]="accountant.accountantName" name="accountantName">
+        </div>
+        <div class="form-group">
+            <label>Accountant Email</label>
+            <input type="text" class="form-control" id="email"
+            [(ngModel)]="accountant.email" name="email">
+        </div>
+        <div class="form-group">
+            <label>Accountant UserName</label>
+            <input type="text" class="form-control" id="username"
+            [(ngModel)]="accountant.username" name="username">
+        </div>
+        <div class="form-group">
+            <label>Accountant Password</label>
+            <input type="password" class="form-control" id="password"
+            [(ngModel)]="accountant.password" name="password">
+        </div>
+
+
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+</div>
+

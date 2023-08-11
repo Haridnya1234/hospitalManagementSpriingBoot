@@ -1,0 +1,112 @@
+<!-- 
+<div class="container">
+    <h3>Patient Diagnosis Details</h3>
+<div>
+<div>
+    <label> <b>First Name: </b></label>  {{patient.firstname}} 
+</div>
+
+<div>
+    <label> <b>Last Name: </b></label> {{patient.lastname}} 
+</div>
+
+<div>
+    <label> <b> Email: </b></label> {{patient.email}} 
+</div>
+
+<div>
+    <label> <b>Username: </b></label> {{patient.username}}
+</div>
+
+<div>
+    <label> <b>Password:</b></label> {{patient.password}} 
+</div>
+
+<div>
+    <label> <b>Address:</b></label> {{patient.address}}
+</div>
+
+<div>
+    <label> <b>Contact:</b></label>  {{patient.contact}} 
+</div>
+
+<div>
+    <label> <b>Age:</b></label> {{patient.age}}
+</div>
+
+<div>
+    <label> <b>Gender:</b></label> {{patient.gender}} 
+</div>
+<div>
+    <label> <b> Blood Group: </b></label> {{patient.bloodgroup}} 
+</div>
+
+
+</div>
+</div> -->
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+<mat-card>
+    <mat-card-content>
+        <div class="boostrap-wrapper">
+            <div class="container">
+                <div class="row">
+                    <!-- <div class="col-md-10 offset-md-1"> -->
+                        <h1 class="text-center">Patient Details</h1>
+                        <table class="table text-center">
+                            <thead class="thead">
+                                <tr>
+                                    <td>Patient Id</td>
+                                    <td>First Name</td>
+                                    <td>Last Name</td>
+                                    <td>Email</td>
+                                    <td>Username</td>
+                                    <td>Password</td>
+                                    <td>Address</td>
+                                    <td>Contact</td>
+                                    <td>Age</td>
+                                    <td>Gender</td>
+                                    <td>BloodGroup</td>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+                                <tr *ngFor="let patientData of patients">
+
+                                    <td>{{patientData.id}}</td>
+                                    <td>{{patientData.firstname}}</td>
+                                    <td>{{patientData.lastname}}</td>
+                                    <td>{{patientData.email}}</td>
+                                    <td>{{patientData.username}}</td>
+                                    <td>{{patientData.password}}</td>
+                                    <td>{{patientData.address}}</td>
+                                    <td>{{patientData.contact}}</td>
+                                    <td>{{patientData.age}}</td>
+                                    <td>{{patientData.gender}}</td>
+                                    <td>{{patientData.bloodgroup}}</td>
+                                    <mat-card-actions class="text-center">
+                                        <button (click)="getPatient(patientData.username)"mat-raised-button style="left: 20px;" color="accent">Delete</button>
+                                        <!-- <button  routerLink="/viewpatient" mat-raised-button color="bg-warning">Show</button> -->
+                                         <button  routerLink="/updatepatient" mat-raised-button color="primary">Update</button>
+                                        <!-- <button (click)="updatePatient(patient.id)" class="btn btn-primary">Update</button> -->
+                                        <button (click)="deletePatient(patientData.id)" mat-raised-button style="left: 20px;" color="accent">Delete</button>
+                                    </mat-card-actions>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    <!-- </div> -->
+                </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+
+
+	
+

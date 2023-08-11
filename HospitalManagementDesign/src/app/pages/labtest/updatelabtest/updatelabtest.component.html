@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="col-md-6-offset-md-3">
+      
+    <h3>Update Lab Test</h3>
+    <form (ngSubmit)="formSubmit()">
+      <div class="form-group">
+        <label>ID</label>
+        <input type="number" class="form-control" id="id" [(ngModel)]="labTest.id" name="id" >
+      </div>
+  
+      <div class="form-group">
+        <label>Test Name</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="labTest.testname" name="name" >
+      </div>
+
+      <div class="form-group">
+        <label>Test Sample</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="labTest.testsample" name="name" >
+      </div>
+  
+      <div class="form-group">
+        <label>Test Duration</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="labTest.testduration"name="name" >
+      </div>
+
+      <div class="form-group">
+        <label>price In RS</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="labTest.priceInRS" name="name" >
+      </div>
+     
+      <button class="btn btn-success" type="submit">Submit</button>
+  
+    </form>
+    </div>
+    </div>
+    

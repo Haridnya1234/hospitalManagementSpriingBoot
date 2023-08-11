@@ -1,0 +1,25 @@
+<app-pharmacist></app-pharmacist>
+<div class="col-md-5 offset-md-3">
+    <h3>Update Pharmacist</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Pharmacist Name</label>
+            <input type="text" class="form-control" id="name"
+            [(ngModel)]="pharmacist.name" name="name">
+        </div>
+        <div class="form-group">
+            <label>User Name</label>
+            <input type="text" class="form-control" id="userName"
+            [(ngModel)]="pharmacist.userName" name="userName">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="text" class="form-control" id="Password"
+            [(ngModel)]="pharmacist.password" name="password">
+        </div>
+      
+
+
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+    </div>

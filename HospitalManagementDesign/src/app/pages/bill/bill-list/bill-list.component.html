@@ -1,0 +1,25 @@
+<app-accountant></app-accountant>
+<h1>Bill List</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Bill Number</th>
+            <th> Amount</th>
+            <th> Date</th>
+            <th>Description</th>
+            
+        </tr>
+    </thead>
+<tbody>
+    <tr *ngFor="let bill of bills">
+        <td>{{bill.billNumber}}</td>
+        <td>{{bill.amount}}</td>
+        <td>{{bill.date}}</td>
+        <td>{{bill.description}}</td>
+        <td>
+            <button (click)="updateBill(bill.id)" class="btn btn-info">Update</button>
+            <button (click)="deleteBill(bill.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+        </td>
+    </tr>
+</tbody>
+</table>
